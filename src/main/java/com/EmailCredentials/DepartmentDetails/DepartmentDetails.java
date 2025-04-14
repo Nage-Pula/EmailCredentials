@@ -6,13 +6,24 @@ public class DepartmentDetails {
 	int DepartmentCode;
 	int deptcode = 0;
 	Scanner sc = new Scanner(System.in);
-	//(Technical, Admin, Human Resource, Legal)
+
+	/*
+	 * 1. Technical
+	 * 2. Admin
+	 * 3. Human Resource
+	 * 4. Legal
+	 * listDepartmentDetails method is used to display the list of departments
+	 */
 	void listDepartmentDetails() {
 		System.out.println("Please Enter Department from the following\n1. Technical\n2. Admin\n3. Human Resource\n4. Legal" );
 
 	}
 
-
+/*
+ * selectDepartment method is used to select the department from the list of departments
+ * user can select the department by entering the department code, 
+ * allows only numbers between 1 and 4
+ */
 	public void selectDepartment() {
 
 		boolean valid = false;
@@ -59,6 +70,10 @@ public class DepartmentDetails {
 
 	}
 
+	/*
+	 * getdeptname method is used to get the department name
+	 * @return departmentName
+	 */
 	public String getdeptname() {
 		// Placeholder for next logic
 		return this.departmentName;

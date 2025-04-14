@@ -12,12 +12,20 @@ public class CredentialService {
 	private String email;
 	private String CompanyName = "company.com";
 	private  String atSymbol = "@";
-	
+	/*
+	 * this method is used to generate the email id of the user.
+	 * @param emp
+	 * @param dep
+	 * return email
+	 */
 	public String generateEmail(EmployeeDetails emp, DepartmentDetails dep) {
 		this.email = (emp.getFirstName()+emp.getLastName()+ this.atSymbol+dep.getdeptname().replace(" ", "") +"." +this.CompanyName).toLowerCase();
 		return this.email;
 	}
-
+	/*
+	 * this method is used to generate the password of the user.
+	 * @return password
+	 */
 	public String generatePassword() {
 		String Uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 		String Lowercase = "abcdefghijklmnopqrstuvwxyz";
@@ -44,6 +52,12 @@ public class CredentialService {
 
 	    return finalPassword.toString();
 	}	
+	/*
+	 * this method is used to generate the unique characters of the password.
+	 * @param source
+	 * @param count
+	 * return result
+	 */
 	public String Uniqechar(String source, int count) {
 		Set<Character> usedChars = new HashSet<>();
 		Random random = new Random();

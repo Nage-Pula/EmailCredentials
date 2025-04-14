@@ -11,13 +11,17 @@ import com.EmailCredentials.EmployeeDetails.EmployeeDetails;
 public class AppTest {
 
 	CredentialService cs = new CredentialService();
-
+	/*
+	 * Test method for
+	 * {@link com.EmailCredentials.CredentialService.CredentialService#generatePassword()}
+	 * 
+	 */
 	@Test
 	public void testPasswordLength() {
 		String password = cs.generatePassword();
 		assertEquals(8, password.length(), "Password must be 8 characters long");
 	}
-
+	
 	@Test
 	public void testPasswordUniqueness() {
 		String password = cs.generatePassword();
@@ -39,6 +43,11 @@ public class AppTest {
 		assertTrue(hasDigit, "Password must have at least one digit");
 		assertTrue(hasSpecial, "Password must have at least one special character");
 	}
+	/*
+	 * Test method for
+	 * {@link com.EmailCredentials.CredentialService.CredentialService#generateEmail(com.EmailCredentials.EmployeeDetails.EmployeeDetails, com.EmailCredentials.DepartmentDetails.DepartmentDetails)}
+	 * 
+	 */
 	@Test
 	public void testEmailFormat() {
 		EmployeeDetails emp = new EmployeeDetails("John", "Doe");

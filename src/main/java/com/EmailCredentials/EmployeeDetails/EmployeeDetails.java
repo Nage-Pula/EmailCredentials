@@ -3,10 +3,16 @@ package com.EmailCredentials.EmployeeDetails;
 public class EmployeeDetails {
 	private String firstName;
 	private String lastName;
+	/*
+	 * Constructor to initialize the first name and last name of the employee
+	 */
 	public EmployeeDetails(String firstName, String lastName) {
 		this.firstName = firstName;
 		this.lastName = lastName;
 	}
+	/*
+	 * Getters and Setters for first name and last name
+	 */
 	public String getFirstName() {
 		return firstName;
 	}
